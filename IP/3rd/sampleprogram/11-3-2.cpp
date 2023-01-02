@@ -7,7 +7,7 @@ using namespace cv;
 string win_src = "src";
 string win_dst = "dst";
 
-int main(int argc, char **argv)
+int main()
 {
   string file_src = "src_depth_wall.png"; // 入力画像のファイル名
   string file_dst = "dst.png"; // 出力画像のファイル名
