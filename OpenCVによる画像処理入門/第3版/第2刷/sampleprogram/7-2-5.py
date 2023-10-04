@@ -6,7 +6,7 @@ file_src = 'src.png'
 file_dst1 = 'dst1.png'
 file_dst2 = 'dst2.png'
 
-img_src = cv2.imread(file_src, 1)
+img_src = cv2.imread(file_src, cv2.IMREAD_COLOR)
 
 cv2.namedWindow('src')
 cv2.namedWindow('dst1')
