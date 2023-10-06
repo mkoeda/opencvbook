@@ -15,7 +15,7 @@ cv2.namedWindow('dst')
 
 # 入力画像 1 を濃淡画像に変換
 img_g1 = cv2.cvtColor(img_src1, cv2.COLOR_BGR2GRAY)
-# マスク画像生成のための二値化
+# マスク画像生成のための2値化
 img_mskg = cv2.threshold(img_g1, 200, 255, cv2.THRESH_BINARY_INV)[1]
 # マスク画像 ( カラー ) 生成
 img_msk = cv2.merge((img_mskg, img_mskg, img_mskg))

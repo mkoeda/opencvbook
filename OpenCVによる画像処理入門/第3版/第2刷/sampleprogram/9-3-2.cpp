@@ -27,17 +27,17 @@ int main()
   namedWindow(win_bkg, WINDOW_AUTOSIZE);
   namedWindow(win_dst, WINDOW_AUTOSIZE);
 
-  Mat img_fg, img_bg, img_df, img_m, img_md, img_msk;
+  Mat img_df, img_m, img_md, img_msk;
 
   // 背景画像との差分画像を計算
-  absdiff(img_fg, img_bg, img_df);
-  // 差分画像の二値化
+  absdiff(img_src, img_bkg, img_df);
+  // 差分画像の2値化
   threshold(img_df, img_m, 120, 255, THRESH_BINARY);
   // 膨張・収縮してマスク画像を生成
   dilate(img_m, img_md, Mat(), Point(-1, -1), 4);
   erode(img_md, img_msk, Mat(), Point(-1, -1), 4);
   // マスク画像を使って前景画像から対象を切り出す
-  bitwise_and(img_fg, img_msk, img_dst);
+  bitwise_and(img_src, img_msk, img_dst);
 
   imshow(win_src, img_src); // 入力画像を表示
   imshow(win_bkg, img_bkg); // 背景画像を表示

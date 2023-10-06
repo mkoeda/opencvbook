@@ -23,10 +23,10 @@ cv2.namedWindow('dst')
 img_df1 = cv2.absdiff(img_src1, img_src2)
 # 画像 B と C の差分画像を計算
 img_df2 = cv2.absdiff(img_src2, img_src3)
-# それぞれの差分画像を二値化
+# それぞれの差分画像を2値化
 img_df1b = cv2.threshold(img_df1, 20, 255, cv2.THRESH_BINARY)[1]
 img_df2b = cv2.threshold(img_df2, 20, 255, cv2.THRESH_BINARY)[1]
-# 二値化された差分画像の共通部分を取得
+# 2値化された差分画像の共通部分を取得
 img_m = cv2.bitwise_and(img_df1b, img_df2b)
 # 膨張・収縮してマスク画像を生成
 op = np.ones((3, 3), np.uint8)

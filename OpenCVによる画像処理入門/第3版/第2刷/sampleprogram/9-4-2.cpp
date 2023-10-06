@@ -36,7 +36,7 @@ int main()
   absdiff(img_src1, img_src2, img_df1);
   // 画像 B と C の差分画像を計算
   absdiff(img_src2, img_src3, img_df2);
-  // それぞれの差分画像を二値化
+  // それぞれの差分画像を2値化
   threshold(img_df1, img_df1b, 30, 255, THRESH_BINARY);
   threshold(img_df2, img_df2b, 30, 255, THRESH_BINARY);
   // 二値化された差分画像の共通部分を取得

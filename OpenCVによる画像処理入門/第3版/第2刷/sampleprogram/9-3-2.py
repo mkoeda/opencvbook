@@ -15,7 +15,7 @@ cv2.namedWindow('dst')
 
 # 背景画像との差分画像を計算
 img_df = cv2.absdiff(img_src, img_bkg)
-# 差分画像の二値化
+# 差分画像の2値化
 img_m = cv2.threshold(img_df, 120, 255, cv2.THRESH_BINARY)[1]
 # 膨張・収縮してマスク画像を生成
 op = np.ones((3, 3), np.uint8)
