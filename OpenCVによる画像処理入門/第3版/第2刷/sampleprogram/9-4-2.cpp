@@ -39,7 +39,7 @@ int main()
   // それぞれの差分画像を2値化
   threshold(img_df1, img_df1b, 30, 255, THRESH_BINARY);
   threshold(img_df2, img_df2b, 30, 255, THRESH_BINARY);
-  // 二値化された差分画像の共通部分を取得
+  // 2値化された差分画像の共通部分を取得
   bitwise_and(img_df1b, img_df2b, img_m);
   // 膨張・収縮してマスク画像を生成
   dilate(img_m, img_md, Mat(), Point(-1, -1), 3);

@@ -30,7 +30,7 @@ int main()
   Mat img_g1, img_mskg, img_msk, img_mskn, img_s1m, img_s2m;
   // 入力画像1を濃淡画像に変換
   cvtColor(img_src1, img_g1, COLOR_BGR2GRAY);
-  // マスク画像生成のための二値化
+  // マスク画像生成のための2値化
   threshold(img_g1, img_mskg, 200, 255, THRESH_BINARY_INV);
   // マスク画像 ( カラー ) 生成
   vector<Mat> channels;
