@@ -11,10 +11,10 @@ string win_dst = "dst";
 
 int main()
 {
-  string file_src1 = "src1.png"; // 入力画像1のファイル名
-  string file_src2 = "src2.png"; // 入力画像2のファイル名
-  string file_src3 = "src3.png"; // 入力画像3のファイル名
-  string file_dst = "dst.png"; // 出力画像のファイル名
+  string file_src1 = "src1_fd.jpg"; // 入力画像1のファイル名
+  string file_src2 = "src2_fd.jpg"; // 入力画像2のファイル名
+  string file_src3 = "src3_fd.jpg"; // 入力画像3のファイル名
+  string file_dst = "dst.jpg"; // 出力画像のファイル名
   Mat img_src1 = imread(file_src1, IMREAD_GRAYSCALE); // 入力画像1の読み込み
   Mat img_src2 = imread(file_src2, IMREAD_GRAYSCALE); // 入力画像2の読み込み
   Mat img_src3 = imread(file_src3, IMREAD_GRAYSCALE); // 入力画像3の読み込み
