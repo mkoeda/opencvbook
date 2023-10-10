@@ -14,7 +14,7 @@ cv2.namedWindow('hst')
 
 min = 150
 max = 200
-table = np.arange(256, dtype=np.uint8)
+table = np.arange(256, dtype = np.uint8)
 for i in range(0, min):
   table[i] = 0
 for i in range(min, max):
