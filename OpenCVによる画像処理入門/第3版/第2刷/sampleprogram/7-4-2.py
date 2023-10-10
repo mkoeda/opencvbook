@@ -11,9 +11,9 @@ cv2.namedWindow('src')
 cv2.namedWindow('dst')
 
 k = 1.0
-op = np.array([[-k, -k, -k],
+op = np.array([[-k, -k,        -k],
                [-k, 1 + 8 * k, -k],
-               [-k, -k, -k]])
+               [-k, -k,        -k]])
 img_tmp = cv2.filter2D(img_src, -1, op)
 img_dst = cv2.convertScaleAbs(img_tmp, alpha = 1, beta = 0)
 
