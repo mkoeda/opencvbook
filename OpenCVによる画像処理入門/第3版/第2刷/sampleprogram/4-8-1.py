@@ -5,8 +5,10 @@ import numpy as np
 file_src = 'src.png'
 file_dst = 'dst.png'
 
+# 入力画像（カラー）の読み込み
 img_src = cv2.imread(file_src, cv2.IMREAD_COLOR)
-# img_src = cv2.imread(file_src, cv2.IMREAD_GRAYSCALE) # 入力画像（グレースケール）の読み込み
+# 入力画像（グレースケール）の読み込み
+# img_src = cv2.imread(file_src, cv2.IMREAD_GRAYSCALE)
 
 cv2.namedWindow('src')
 cv2.namedWindow('dst')
