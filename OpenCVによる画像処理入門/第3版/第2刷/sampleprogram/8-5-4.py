@@ -11,9 +11,9 @@ cv2.namedWindow('src')
 # cv2.namedWindow('dst')
 
 contours = cv2.findContours(img_src, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)[0]
-area = cv2.contourArea(contours[0])
-perimeter = cv2.arcLength(np.array(contours[0]), True)
-roundness = 4 * np.pi * area / perimeter / perimeter
+area = cv2.contourArea(contours[0])  # 面積
+perimeter = cv2.arcLength(np.array(contours[0]), True)  # 周囲長
+roundness = 4 * np.pi * area / perimeter / perimeter  # 円形度
 print(area, perimeter, roundness)
 
 cv2.imshow('src', img_src)  # 入力画像を表示
