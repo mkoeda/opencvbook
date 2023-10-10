@@ -13,7 +13,6 @@ int main()
   for(int y = 0; y < height; y++) {
     for(int x = 0; x < width; x++) {
       // ここに処理を記述する
-      image[y][x] = 255;
     }
   }
 
