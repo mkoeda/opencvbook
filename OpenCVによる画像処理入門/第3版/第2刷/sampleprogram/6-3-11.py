@@ -13,7 +13,7 @@ cv2.namedWindow('dst')
 cv2.namedWindow('hst')
 
 shift = 100
-table = np.arange(256, dtype=np.uint8)
+table = np.arange(256, dtype = np.uint8)
 for i in range(0, 255):
   j = i + shift
   if j < 0:

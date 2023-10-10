@@ -13,7 +13,7 @@ cv2.namedWindow('dst')
 
 # ルックアップテーブル生成
 gamma = 2.0
-Y = np.ones((256, 1), dtype='uint8') * 0
+Y = np.ones((256, 1), dtype = 'uint8') * 0
 for i in range(256):
   Y[i][0] = 255 * pow(float(i) / 255, 1.0 / gamma)
 # ルックアップテーブル変換
