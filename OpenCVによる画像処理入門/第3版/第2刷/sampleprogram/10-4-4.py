@@ -15,8 +15,10 @@ size = tuple(np.array([img_src.shape[1], img_src.shape[0]]))
 pts1 = np.float32([[0, 0], [0, 479], [639, 479], [639, 0]])
 pts2 = np.float32([[160, 240], [0, 479], [639, 479], [480, 240]])
 
+# 射影変換行列を計算
 psp_mat = cv2.getPerspectiveTransform(pts1, pts2)
 
+# 射影変換
 img_dst = cv2.warpPerspective(img_src, psp_mat, size, flags = cv2.INTER_CUBIC)
 
 cv2.imshow('src', img_src)  # 入力画像を表示
