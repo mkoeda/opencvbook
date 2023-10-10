@@ -13,9 +13,9 @@ cv2.namedWindow('dst')
 rows, cols = img_src.shape
 img_max = 255 * np.ones([rows, cols]).astype('uint8')
 
-img_h = img_src
-img_s = img_max
-img_v = img_src
+img_h = img_src  # H
+img_s = img_max  # S
+img_v = img_src  # V
 
 img_hsv = cv2.merge((img_h, img_s, img_v))
 img_dst = cv2.cvtColor(img_hsv, cv2.COLOR_HSV2BGR_FULL)
