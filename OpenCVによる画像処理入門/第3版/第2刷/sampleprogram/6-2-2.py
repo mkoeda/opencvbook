@@ -12,7 +12,7 @@ cv2.namedWindow('src')
 # cv2.namedWindow('dst')
 cv2.namedWindow('hst')
 
-# ヒストグラム表示用，256×100ピクセル，0で初期化
+# ヒストグラム表示用，256×100ピクセル，0（黒）で初期化
 img_hst = np.zeros([100, 256]).astype('uint8')
 rows, cols = img_hst.shape
 
