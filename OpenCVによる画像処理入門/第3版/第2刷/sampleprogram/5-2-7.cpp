@@ -12,7 +12,7 @@ int main()
   string file_src = "src.png"; // 入力画像のファイル名
   string file_dst = "dst.png"; // 出力画像のファイル名
   Mat img_src = imread(file_src, IMREAD_COLOR); // 入力画像（カラー）の読み込み
-  // Mat img_src = imread(file_src, 0); // 入力画像（グレースケール）の読み込み
+  // Mat img_src = imread(file_src, IMREAD_GRAYSCALE); // 入力画像（グレースケール）の読み込み
 
   Mat img_dst;
   if(!img_src.data) {
