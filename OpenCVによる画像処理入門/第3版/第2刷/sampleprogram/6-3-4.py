@@ -13,14 +13,14 @@ cv2.namedWindow('dst')
 
 # ルックアップテーブル生成
 gamma = 2.0
-Y = np.ones((256, 1), dtype = 'uint8') * 0
+Y = np.ones((256, 1), dtype = np.uint8) * 0
 for i in range(256):
   Y[i][0] = 255 * pow(float(i) / 255, 1.0 / gamma)
 # ルックアップテーブル変換
 img_dst = cv2.LUT(img_src, Y)
 
 # ヒストグラム表示用，256×100ピクセル，0で初期化
-img_hst = np.zeros([100, 256]).astype('uint8')
+img_hst = np.zeros([100, 256]).astype(np.uint8)
 rows, cols = img_hst.shape
 
 # 度数分布を求める

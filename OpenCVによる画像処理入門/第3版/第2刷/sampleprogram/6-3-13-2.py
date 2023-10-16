@@ -7,7 +7,7 @@ file_dst = 'dst.png'
 file_hst = 'hst.png'
 
 img_src = cv2.imread(file_src, cv2.IMREAD_GRAYSCALE)
-img_dst = np.zeros(img_src.shape).astype('uint8')
+img_dst = np.zeros(img_src.shape).astype(np.uint8)
 
 cv2.namedWindow('src')
 cv2.namedWindow('dst')
@@ -18,7 +18,7 @@ max = 200
 cv2.normalize(img_src, img_dst, min, max, cv2.NORM_MINMAX)
 
 # ヒストグラム表示用，256×100ピクセル，0で初期化
-img_hst = np.zeros([100, 256]).astype('uint8')
+img_hst = np.zeros([100, 256]).astype(np.uint8)
 rows, cols = img_hst.shape
 
 # 度数分布を求める

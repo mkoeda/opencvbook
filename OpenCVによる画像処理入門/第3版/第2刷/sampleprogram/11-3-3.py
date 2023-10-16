@@ -11,7 +11,7 @@ cv2.namedWindow('src')
 cv2.namedWindow('dst')
 
 rows, cols = img_src.shape
-img_max = 255 * np.ones([rows, cols]).astype('uint8')
+img_max = 255 * np.ones([rows, cols]).astype(np.uint8)
 
 img_h = img_src  # H
 img_s = img_max  # S

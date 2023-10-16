@@ -11,7 +11,7 @@ cv2.namedWindow('src')
 cv2.namedWindow('dst')
 
 rows, cols = img_src.shape
-img_dst = np.zeros([rows, cols]).astype('uint8')
+img_dst = np.zeros([rows, cols]).astype(np.uint8)
 
 for i in range(1, 256, 5):
   print(i)

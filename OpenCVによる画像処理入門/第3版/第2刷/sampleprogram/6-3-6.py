@@ -15,7 +15,7 @@ cv2.namedWindow('hst')
 img_dst = 255 - img_src
 
 # ヒストグラム表示用，256×100ピクセル，0で初期化
-img_hst = np.zeros([100, 256]).astype('uint8')
+img_hst = np.zeros([100, 256]).astype(np.uint8)
 rows, cols = img_hst.shape
 
 # 度数分布を求める
