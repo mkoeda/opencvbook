@@ -7,7 +7,7 @@ file_dst = 'dst.png'
 file_hst = 'hst.png'
 
 img_src = cv2.imread(file_src, cv2.IMREAD_GRAYSCALE)
-img_dst = cv2.imread(file_src, cv2.IMREAD_GRAYSCALE)
+img_dst = np.zeros(img_src.shape).astype('uint8')
 
 cv2.namedWindow('src')
 cv2.namedWindow('dst')
