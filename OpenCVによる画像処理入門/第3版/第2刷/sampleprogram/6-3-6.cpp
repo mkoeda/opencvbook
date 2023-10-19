@@ -30,7 +30,7 @@ int main()
 
   // ヒストグラム表示用，256×100ピクセル，0（黒）で初期化
   Mat img_hst;
-  img_hst = Mat::zeros(100, 256, CV_8UC1);
+  img_hst = Mat::zeros(Size(256, 100), CV_8UC1);
 
   const int hdims[] = {256}; // 次元ごとの度数分布のサイズ
   const float ranges[] = {0, 256};

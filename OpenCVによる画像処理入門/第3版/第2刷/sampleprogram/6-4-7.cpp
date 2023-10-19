@@ -24,7 +24,7 @@ int main()
   namedWindow(win_dst, WINDOW_AUTOSIZE);
 
   int width = img_src.cols, height = img_src.rows;
-  img_dst = Mat::zeros(height, width, img_src.type());
+  img_dst = Mat::zeros(Size(width, height), img_src.type());
 
   // Bayer 型のディザ行列
   const int N = 4;

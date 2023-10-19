@@ -26,7 +26,7 @@ int main()
 
   srand((unsigned int)time(NULL)); // 乱数の初期化
   int width = img_src.cols, height = img_src.rows;
-  img_dst = Mat::zeros(height, width, img_src.type());
+  img_dst = Mat::zeros(Size(width, height), img_src.type());
 
   for(int y = 0; y < height; y++) {
     for(int x = 0; x < width; x++) {
