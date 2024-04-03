@@ -19,8 +19,8 @@ img_df = cv2.absdiff(img_src, img_bkg)
 img_m = cv2.threshold(img_df, 120, 255, cv2.THRESH_BINARY)[1]
 # 膨張・収縮してマスク画像を生成
 op = np.ones((3, 3)).astype(np.uint8)
-img_md = cv2.dilate(img_m, op, iterations=4)
-img_msk = cv2.erode(img_md, op, iterations=4)
+img_md = cv2.dilate(img_m, op, iterations = 4)
+img_msk = cv2.erode(img_md, op, iterations = 4)
 # マスク画像を使って対象を切り出す
 img_dst = cv2.bitwise_and(img_src, img_msk)
 

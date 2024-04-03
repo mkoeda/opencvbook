@@ -16,8 +16,8 @@ img_dst = cv2.inRange(img_src, depth_min, depth_max)  # セグメンテーショ
 
 # ノイズ除去（収縮・膨張）
 kernel = np.ones((3, 3)).astype(np.uint8)
-img_dst = cv2.erode(img_dst, kernel, iterations=2)
-img_dst = cv2.dilate(img_dst, kernel, iterations=2)
+img_dst = cv2.erode(img_dst, kernel, iterations = 2)
+img_dst = cv2.dilate(img_dst, kernel, iterations = 2)
 
 # ラベリング
 nlabel, img_lab = cv2.connectedComponents(img_dst)
