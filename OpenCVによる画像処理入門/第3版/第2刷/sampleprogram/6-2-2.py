@@ -24,6 +24,7 @@ hist = cv2.calcHist([img_src], [0], None, hdims, hranges)
 # 度数の最大値を取得
 min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(hist)
 
+# ヒストグラムを白線で描画
 for i in range(0, 255):
   v = hist[i]
   cv2.line(img_hst, (i, rows), (i, int(rows - rows * (v / max_val))), (255, 255, 255))
