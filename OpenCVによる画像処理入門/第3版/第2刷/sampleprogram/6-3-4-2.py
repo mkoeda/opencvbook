@@ -20,9 +20,9 @@ while True:
   gamma = cv2.getTrackbarPos('gamma', 'dst') + 1.0
 
   # ガンマ補正
-  Y = np.ones((256, 1), dtype = np.uint8) * 0
+  Y = np.arange(256).astype(np.uint8)
   for i in range(256):
-    Y[i][0] = 255 * pow(float(i) / 255, 1.0 / gamma)
+    Y[i] = 255 * pow(float(i) / 255, 1.0 / gamma)
   img_dst = cv2.LUT(img_src, Y)
 
   # 出力画像を表示
