@@ -12,8 +12,8 @@ cv2.namedWindow('src')
 cv2.namedWindow('dst1')
 cv2.namedWindow('dst2')
 
-img_dst1 = cv2.GaussianBlur(img_src, (11, 11), 1)
-img_dst2 = cv2.bilateralFilter(img_src, 10, 50, 1)
+img_dst1 = cv2.GaussianBlur(img_src, (11, 11), 1) # Gaussian オペレータ
+img_dst2 = cv2.bilateralFilter(img_src, 10, 50, 1) # バイラテラルオペレータ
 
 cv2.imshow('src', img_src)  # 入力画像を表示
 cv2.imshow('dst1', img_dst1)  # 出力画像を表示

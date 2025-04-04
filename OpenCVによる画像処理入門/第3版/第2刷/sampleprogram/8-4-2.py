@@ -10,7 +10,7 @@ img_src = cv2.imread(file_src, cv2.IMREAD_GRAYSCALE)
 cv2.namedWindow('src')
 cv2.namedWindow('dst')
 
-element8 = np.array([[1, 1, 1], [1, 1, 1], [1, 1, 1]], np.uint8)  # 8近傍
+element8 = np.array([[1, 1, 1], [1, 1, 1], [1, 1, 1]]).astype(np.uint8)  # 8近傍
 # オープニング
 img_tmp = cv2.morphologyEx(img_src, cv2.MORPH_OPEN, element8)
 # クロージング

@@ -29,7 +29,7 @@ img_df2b = cv2.threshold(img_df2, 20, 255, cv2.THRESH_BINARY)[1]
 # 2値化された差分画像の共通部分を取得
 img_m = cv2.bitwise_and(img_df1b, img_df2b)
 # 膨張・収縮してマスク画像を生成
-op = np.ones((3, 3), np.uint8)
+op = np.ones((3, 3)).astype(np.uint8)
 img_md = cv2.dilate(img_m, op, iterations=3)
 img_msk = cv2.erode(img_md, op, iterations=3)
 # マスクをかける

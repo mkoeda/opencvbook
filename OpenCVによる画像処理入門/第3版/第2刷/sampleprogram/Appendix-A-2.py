@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 
 # 640x480の黒い画像
-img_src = np.zeros((480, 640, 3), np.uint8)
+img_src = np.zeros((480, 640, 3)).astype(np.uint8)
 
 # 点(0, 0)と点(640, 480)を結ぶ太さ5の黄色の線分
 cv2.line(img_src, (0, 0), (640, 480), (0, 255, 255), 5)
