@@ -1,0 +1,17 @@
+{
+    "configurations": [
+        {
+            "name": "execute active file", // デバッグ時の選択肢
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${fileBasenameNoExtension}.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            //"console": "newExternalWindow", //外部タイミナル上で出力
+            "console": "integratedTerminal", //内部ターミナル上で出力
+            "preLaunchTask": "compile by cl.exe"
+        }
+    ]
+}
